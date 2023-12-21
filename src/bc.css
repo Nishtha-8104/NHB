@@ -1,0 +1,81 @@
+.bc{
+ 
+    margin: 0;
+    
+}
+h2{
+    display: block;
+    margin: 0;
+    font-weight: 350;
+    
+    /* width: 48vw; */
+}
+.bigcon{
+    position: relative;
+    top: 10px;
+    height: 270px !important;
+    width: 49vw !important;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 2px;
+}
+.container{
+    
+    height: 240px !important;
+    width: 49vw !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  
+}
+.input{
+    display: inline;
+    margin: 10px;
+}
+
+.dm h2{
+    width: 80px;
+}
+.dm{
+    display: flex;
+    margin: 20px;
+    flex-direction: column-reverse;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+
+.l{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.main{
+    display: flex;
+    flex-direction: row;
+}
+.r{
+    display: flex;
+    flex-direction: column;
+}
+
+svg{
+    height: 40px;
+    width: auto;
+    margin-left: 0;
+    /* display: flex; */
+   
+}
+
+canvas{
+
+    height: auto;
+    width: 70px;
+}
+
+h2{
+
+    display: flex;
+    justify-content: center;
+}

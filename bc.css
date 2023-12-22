@@ -1,0 +1,157 @@
+h2.nhb {
+  display: flex;
+  width: auto;
+  height: 20px;
+  margin: 0;
+  font-weight: 350;
+  font-size: 1rem;
+  position: relative;
+  left: 20px;
+  letter-spacing: -1px;
+}
+
+.page {
+  width: 20cm;
+  height: 28.5cm;
+  /* border: 2px solid black; */
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  /* gap: 5px;  */
+  margin: 0;
+  page-break-inside: avoid;
+  position: relative;
+  top: 8px;
+  page-break-inside: avoid;
+}
+
+.input {
+  display: inline;
+  margin: 10px;
+}
+
+.l {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.r {
+  display: flex;
+  flex-direction: column;
+
+  margin: 20px;
+  margin-left: 0;
+}
+
+svg {
+  height: 28px;
+  width: auto;
+  margin-left: 0;
+  /* display: flex; */
+  /* position: relative;
+    bottom: 10px; */
+}
+
+canvas {
+  height: auto;
+  width: 40px;
+  position: relative;
+  left: 30px;
+  top: 1px;
+}
+rect {
+  padding: 0;
+}
+
+.bc {
+  width: auto;
+  height: 160px;
+}
+
+.bc > * {
+  margin: 0;
+}
+
+.container {
+  height: 5cm;
+  width: 7.9cm; /* Set your desired height */
+  /* Gap of 1 inch on all sides */
+  border: 2px solid black; /* Add border for visualization */
+  box-sizing: border-box;
+  overflow: hidden;
+  page-break-inside: avoid;
+  margin: 1cm;
+}
+
+@media print {
+  .container {
+    height: 5cm;
+    width: 7.9cm; /* Set your desired height */
+    /* Gap of 1 inch on all sides */
+    border: 2px solid black; /* Add border for visualization */
+    box-sizing: border-box;
+    overflow: hidden;
+    page-break-inside: avoid;
+  }
+  body {
+    margin: 20px;
+  }
+
+  .page {
+    width: 20cm;
+    height: 29cm;
+    margin: 0;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    page-break-inside: auto;
+    position: relative;
+
+    page-break-before: always;
+  }
+
+  @page {
+    size: "A4";
+    margin: 10cm;
+  }
+}
+
+.forDm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.in {
+  transform: rotate(90deg);
+  width: 110px;
+  position: relative;
+  top: 40px;
+  font-size: 0.8rem;
+  right: 0px;
+  font-weight: 600;
+}
+.dm {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 80px;
+}
+
+.first {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  position: relative;
+  bottom: 12px;
+}

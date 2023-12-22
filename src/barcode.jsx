@@ -36,69 +36,76 @@ function BarcodeGenerator(props) {
       <div className="forDm">
         <div className="bc">
           <Barcode
+          
             value={arr[0]}
-            width={2.2}
-            height={40}
+            width={2.9}
+            height={70}
             textPosition="top"
             textAlign="left"
-            fontSize={25}
             margin={0}
             marginLeft={20}
             text={txt[0]}
             format={'CODE39'}
+            font={'arial'}
+            fontSize={35}
           />
           <br />
           <Barcode
             value={'S'+props.serialNum.toString()}
-             width={2.2}
-            height={40}
+            width={2.9}
+            height={70}
             textPosition="top"
             textAlign="left"
-            fontSize={25}
+            fontSize={35}
             margin={0}
             marginLeft={20}
             text={'Serial (S) '+props.serialNum.toString()}
             format={'CODE39'}
-            
+            font={'arial'}
           />
           <br />
           <Barcode
             value={arr[2]}
-            width={2.2}
-            height={40}
+            width={2.9}
+            height={70}
             textPosition="top"
             textAlign="left"
-            fontSize={25}
+            fontSize={35}
             margin={0}
             marginLeft={20}
             text={txt[2]}
             format={'CODE39'}
+            font={'arial'}
           />
           <br />
           <Barcode
             value={arr[3]}
-            width={2.2}
-            height={40}
+            width={2.9}
+            height={70}
             textPosition="top"
             textAlign="left"
-            fontSize={25}
+            fontSize={35}
             margin={0}
             marginLeft={20}
             text={txt[3]}
             format={'CODE39'}
+            font={'arial'}
           />
           <br />
+
           <Barcode
+            format={"CODE39"}
             value={'H'+props.details}
-            width={2.2}
-            height={40}
+            width={2.9}
+            height={70}
             textPosition="top"
             textAlign="left"
-            fontSize={25}
+            fontSize={35}
             margin={0}
             marginLeft={20}
             text={'Batch (H) '+props.details}
-            format={'CODE39'}
+            font={'arial'}
+            
             
           />
         </div>

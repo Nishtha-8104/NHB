@@ -24,6 +24,7 @@ function App() {
   };
 
   const num = parseInt(batchNum.no, 10);
+
   const snum = parseInt(batchNum.serial, 10);
   var temp = snum;
   const arrForSerial = [];
@@ -31,34 +32,68 @@ function App() {
   for (let i = 0; i < num; i++) {
     arrForSerial.push(temp);
     temp += 1;
-  }
-  const left = [];
-  const right = [];
+   }
+  // const left = [];
+  // const right = [];
+
+  // for (let i = 0; i < num; i++) {
+  //   var barcodeElement = (
+  //     <BarcodeGenerator
+  //       details={batchNum.batch}
+  //       key={i}
+  //       serialNum={arrForSerial[i]}
+        
+  //     />
+  //   );
+
+  //   if (i <  Math.ceil(num / 2)) {
+  //     left.push(barcodeElement);
+  //   } else {
+  //     right.push(barcodeElement);
+  //   }
+  // }
+
+  
+ 
+  var pages = [];
+  var tempPage = [];
 
   for (let i = 0; i < num; i++) {
-    var barcodeElement = (
+    tempPage.push(
       <BarcodeGenerator
         details={batchNum.batch}
         key={i}
         serialNum={arrForSerial[i]}
-        
       />
     );
 
-    if (i <  Math.ceil(num / 2)) {
-      left.push(barcodeElement);
-    } else {
-      right.push(barcodeElement);
+    if ((i + 1) % 8 === 0) {
+      if(i<8){
+        pages.push(<div className="first">{tempPage}</div>);
+        tempPage = [];  
+      }
+      else{pages.push(tempPage);
+        tempPage = [];}
+      
     }
   }
+
+  if (tempPage.length > 0) {
+    pages.push(tempPage);
+  }
+
+
 
   return (
     <div className="App">
       <Input onAdd={saveVar} />
       <button onClick={handlePrint}>Print</button>
       <div className="main" ref={printRef}>
-        <div className="l">{left}</div>
-        <div className="r">{right}</div>
+      {pages.map((page, index) => (
+          <div key={index} className="page">
+            {page}
+          </div>
+        ))}
       </div>
     </div>
   );

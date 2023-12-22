@@ -92,7 +92,7 @@ function App() {
       {pages.map((page, index) => (
           <div key={index} className="page">
             {page}
-          </div>
+ x         </div>
         ))}
       </div>
     </div>
